@@ -1,4 +1,8 @@
 Flush Test : https://docs.microsoft.com/en-us/windows-hardware/test/hlk/testref/2dec1f67-b506-4434-8bdf-763147ad8f0b
+                                       /zh-tw/
+
+Reference : https://www.csimn.com/CSI_pages/SNMP101.html
+            https://zh.wikipedia.org/wiki/%E7%AE%80%E5%8D%95%E7%BD%91%E7%BB%9C%E7%AE%A1%E7%90%86%E5%8D%8F%E8%AE%AE
 
 This test leverages SNMP-controlled, programmable power strips to validate that the driver, 
 controller, and underlying device honor the appropriate flush command by persisting data to the device.
