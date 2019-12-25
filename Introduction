@@ -1,0 +1,18 @@
+Flush Test :
+
+This test leverages SNMP-controlled, programmable power strips to validate that the driver, 
+controller, and underlying device honor the appropriate flush command by persisting data to the device.
+
+此測試會利用 SNMP控制的延長線來驗證受測Device再接收到Flush Command後，可以確保Device內儲存資料的完整性
+
+1.Write a known pattern directly to disk (by-passing the file system) and wait for writes to complete.
+2.Send Flush command and wait for completion.
+3.Immediately trigger sudden power loss.
+4.On reboot, read back and verify that all data that was written to disk before the flush command.
+5.Repeat cycle with a different write scenario (different size, pattern, location, etc.).
+
+1.選擇一種資料寫入的模式 資料寫入Disk內，並等待寫入完成
+2.送出Flish Command
+3.瞬間斷電
+4.Reboot之後，讀回寫入的檔案並確認其完整性
+5.進行下一次不同模式的測試
