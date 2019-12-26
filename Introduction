@@ -43,6 +43,7 @@ Running the test
 延長線要可以透過本地端或是遠端連線到機器上
 
 Power-strip
+
 The test supports providing OID value for SNMP connections for a PDU. 
 The default OID is set as .1.3.6.1.4.1.318.1.1.12.3.3.1.1.4 as it is the one that 
 is used by APC and it can be changed when providing parameters to the test based on the OID of the PDU. 
@@ -66,5 +67,26 @@ as well that supports configuration mentioned as above.
 To run the test, you will need the IP address of the power-strip.
 Please refer to the power-strip user manual for information on how to discover the IP address.
 
+這個測試是使用具有ASN的值的APC型或是CPS型的PDU來進行測試
+可以參考power-strip user manual來看怎麼取得IP 
+
+Sudden Power Loss and BIOS setting
+
+Test runs about 21 scenarios initiating sudden power loss each time. 
+When power-strip port is programmed for power off and delayed power on, 
+systems may not power ON automatically as this is a BIOS setting and is usually available on desktop machines. 
+Example: On HP Compaq DC7800 machine, In BIOS under Advanced->Power-On Options, there is a field called "After Power Loss", set it to ON.
+
+For uninterrupted and automated way of running flush test, set the BIOS setting to power ON machine automatically 
+when power is plugged in.
+
+測試會進行21次斷電情境測試，程式經由延長線的port來執行斷電以及延長開機時間
+機器可能不會自動開機，因為這個會和BIOS設定有關，且通常只可以在桌機上正常使用
+如果發生這種情形，請在BIOS將自動power on功能開啟
+
+Battery/Non-battery powered systems
+Flush runs only on non-battery powered systems. If you are using a desktop machine, flush is applicable. 
+If you are using a laptop machine (we assume battery is plugged in), flush is not applicable. 
+Below are the options available for certifying devices against systems.
 
 
