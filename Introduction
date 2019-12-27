@@ -90,3 +90,41 @@ If you are using a laptop machine (we assume battery is plugged in), flush is no
 Below are the options available for certifying devices against systems.
 
 
+More information
+These scenarios send a flush command to the device as soon as all outstanding I/O complete for a given scenario. Power loss occurs immediately after the flush command completes. If any data from the scenario did not persist to disk, the test will fail. The logo test will run each of these 21 scenarios.
+
+1.Flush and Reboot after 512MB of Syncronous Sequential Writes
+Small writes (512B - 4KB)
+Large writes (768KB - 1MB)
+Pseudorandom-sized writes (512B - 1MB)
+
+2.Flush and Reboot after 512MB of Syncronous Random Writes
+Small writes (512B - 4KB)
+Large writes (768KB - 1MB)
+Pseudorandom-sized writes (512B - 1MB)
+
+3.Flush and Reboot after 512MB of Syncronous Striding Writes
+Small writes (512B - 4KB)
+Large writes (768KB - 1MB)
+Pseudorandom-sized writes (512B - 1MB)
+
+4.Flush and Reboot after 1GB of Asyncronous Sequential Writes via 4 threads
+Small writes (512B - 4KB)
+Large writes (768KB - 1MB)
+Pseudorandom-sized writes (512B - 1MB)
+
+5.Flush and Reboot after 1GB of Asyncronous Random Writes via 4 threads
+Small writes (512B - 4KB)
+Large writes (768KB - 1MB)
+Pseudorandom-sized writes (512B - 1MB)
+
+6.Flush and Reboot after 1GB of Asyncronous Striding Writes via 4 threads
+Small writes (512B - 4KB)
+Large writes (768KB - 1MB)
+Pseudorandom-sized writes (512B - 1MB)
+
+7.Flush and Reboot after 1.5GB of Asyncronous Random, Sequential, and Striding Writes via 6 threads
+Small writes (512B - 4KB)
+Large writes (768KB - 1MB)
+Pseudorandom-sized writes (512B - 1MB)
+
